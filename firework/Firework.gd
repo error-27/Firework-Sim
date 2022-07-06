@@ -15,7 +15,6 @@ var offshootScene = preload("res://firework/Offshoot.tscn")
 onready var trailEmitter = $Trail
 onready var explosionEmitter = $Explosion
 onready var timer = $ExplodeTimer
-onready var explodeSound = $AudioStreamPlayer2D
 
 export var minTime: float
 export var maxTime: float
@@ -51,7 +50,6 @@ func _on_Timer_timeout():
 	if not exploded:
 		trailEmitter.emitting = false
 		explosionEmitter.emitting = true
-		explodeSound.play()
 		exploded = true
 		speed = 0
 		if isOffshooting:

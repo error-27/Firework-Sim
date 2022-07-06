@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://firework/FireworkSpawner.gd" type="Script" id=1]
-[ext_resource path="res://firework/sounds/shot_02.ogg" type="AudioStream" id=2]
 
 [node name="FireworkSpawner" type="Position2D"]
 script = ExtResource( 1 )
@@ -9,8 +8,5 @@ minInterval = 1.2
 maxInterval = 1.7
 
 [node name="Timer" type="Timer" parent="."]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 2 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
