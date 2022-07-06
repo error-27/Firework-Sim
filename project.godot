@@ -22,7 +22,10 @@ _global_script_class_icons={
 
 config/name="Firework Simulation"
 run/main_scene="res://World.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://transparent.png"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://Fireworks.png"
+config/windows_native_icon="res://Fireworks.ico"
 
 [display]
 
