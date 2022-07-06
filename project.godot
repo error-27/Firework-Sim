@@ -13,32 +13,27 @@ _global_script_classes=[ {
 "class": "ExplosionResource",
 "language": "GDScript",
 "path": "res://firework/FireworkResource.gd"
-}, {
-"base": "",
-"class": "GitAPI",
-"language": "NativeScript",
-"path": "res://addons/godot-git-plugin/git_api.gdns"
 } ]
 _global_script_class_icons={
-"ExplosionResource": "",
-"GitAPI": ""
+"ExplosionResource": ""
 }
 
 [application]
 
-config/name="July4"
+config/name="Firework Simulation"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
 [display]
 
+window/size/resizable=false
 window/size/fullscreen=true
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
 [gdnative]
 
-singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+singletons=[  ]
 
 [physics]
 
