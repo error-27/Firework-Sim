@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://firework/materials/trails/Trail1.tres" type="Material" id=1]
+[ext_resource path="res://firework/sprites/star.png" type="Texture" id=2]
+[ext_resource path="res://firework/materials/explosions/particles/CircleExplode1.tres" type="Material" id=3]
+[ext_resource path="res://firework/Firework.gd" type="Script" id=4]
+[ext_resource path="res://firework/sounds/fw_01.ogg" type="AudioStream" id=5]
+
+[node name="Firework" type="Node2D"]
+script = ExtResource( 4 )
+minTime = 1.8
+maxTime = 2.5
+speed = 500.0
+
+[node name="ExplodeTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Trail" type="Particles2D" parent="."]
+amount = 25
+local_coords = false
+process_material = ExtResource( 1 )
+texture = ExtResource( 2 )
+
+[node name="Explosion" type="Particles2D" parent="."]
+emitting = false
+amount = 25
+lifetime = 1.5
+one_shot = true
+explosiveness = 1.0
+local_coords = false
+process_material = ExtResource( 3 )
+texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[connection signal="timeout" from="ExplodeTimer" to="." method="_on_Timer_timeout"]

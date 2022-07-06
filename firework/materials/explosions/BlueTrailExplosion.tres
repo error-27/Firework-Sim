@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://firework/FireworkResource.gd" type="Script" id=1]
+[ext_resource path="res://firework/materials/explosions/particles/TrailExplosionBlue.tres" type="Material" id=2]
+
+[resource]
+script = ExtResource( 1 )
+offshoot = ExtResource( 2 )
+offshootAmount = 5
+offshootSpread = 45.0

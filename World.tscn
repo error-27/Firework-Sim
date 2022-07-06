@@ -1,0 +1,52 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://firework/FireworkSpawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://World.gd" type="Script" id=2]
+
+[sub_resource type="Environment" id=1]
+background_mode = 4
+glow_enabled = true
+glow_bloom = 0.17
+glow_blend_mode = 0
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="FireworkSpawner" parent="." instance=ExtResource( 1 )]
+position = Vector2( 256, 890 )
+minInterval = 2.0
+maxInterval = 3.6
+spread = 20.0
+
+[node name="FireworkSpawner2" parent="." instance=ExtResource( 1 )]
+position = Vector2( -385, 899 )
+minInterval = 2.0
+maxInterval = 3.6
+spread = 20.0
+
+[node name="FireworkSpawner3" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1080, 899 )
+minInterval = 2.0
+maxInterval = 3.6
+spread = 20.0
+
+[node name="FireworkSpawner4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 977, 897 )
+minInterval = 2.0
+maxInterval = 3.6
+spread = 20.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+zoom = Vector2( 3, 3 )
+
+[node name="Background" type="ColorRect" parent="."]
+show_behind_parent = true
+margin_left = -2002.0
+margin_top = -1138.0
+margin_right = 2251.0
+margin_bottom = 1138.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )

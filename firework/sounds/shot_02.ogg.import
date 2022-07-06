@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/shot_02.ogg-e103d32a259bc966ae30d056aa841001.oggstr"
+
+[deps]
+
+source_file="res://firework/sounds/shot_02.ogg"
+dest_files=[ "res://.import/shot_02.ogg-e103d32a259bc966ae30d056aa841001.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
